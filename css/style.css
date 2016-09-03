@@ -1,0 +1,215 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+#bc{
+	width:100%;
+	height:100%;
+	padding:0;
+}
+#header{
+	background-size: 100% 100%;
+	background-image:url(images/bg_banner.png);
+	background-repeat:repeat;
+	width:100%;
+	height:auto;
+	padding:0;
+}
+#banner{
+    padding: 0;
+    width: 100%;
+    height: 90px;
+    background-image:url(images/banner.png);
+    background-repeat:no-repeat;
+    background-position:left top;
+}
+#mobileBar{
+	position: relative;
+	margin: 0px;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	z-index: 1;
+	padding: 0px;
+	height: 42px;
+	background-color: #889BB3;
+	border-top: 1px solid #CDD5DF;
+	border-bottom: 1px solid #2D3642;
+	color: white;
+	font-family: Helvetica;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 44px;
+	text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0px;
+	background-image: url('images/mobileBar-bg.png')
+
+}
+.mobileButton{
+	width: 80px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	margin: 6px;
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 13px;
+	font-weight: bold;
+	vertical-align: middle; 
+	background-color: transparent;
+	background-size: 100% 100%;
+}
+#irMapa{
+	float: left;
+	padding-left: 10px;
+	background-image: url('images/leftButton.png');
+	display: none;
+}
+#irMenu{
+	float: right;
+	padding-right: 10px;
+	background-image: url('images/rightButton.png');
+}
+#mainWindow{
+	width:100%;
+	height:100%;
+	padding:0;
+}
+#mainWB{
+	padding:0;
+}
+#mapContainer{
+	padding:0;
+}
+#map{
+	height:100%;
+	width: 100%;
+	padding:0;
+    margin:0;
+}
+#toolbarContainer{
+	position: absolute;
+	left: 70px; 
+	padding: 0;
+	height: 55px;
+	width: 110px;
+	-moz-border-radius: 0 0 10px 10px;
+  	-webkit-border-radius: 0 0 10px 10px;
+  	-o-border-radius: 0 0 10px 10px;
+  	border-radius: 0 0 10px 10px;
+  	background-image: url('images/toolbar_bg.png');
+}
+#toolbar{
+	background-image: none;
+}
+#toolbar,#toolbarContainer{
+	z-index: 999;
+	background-color: transparent !important;
+	border: none;
+}
+#toolbar > span{
+	margin: 5px 0 5px 5px;
+}
+.toolbarIcon{
+    background-size:100% 100%;
+    width: 40px;
+    height: 40px;
+}
+.ubicarIcon{
+    background-image:url('images/ubicar.png');
+}
+.logo{
+	width: 240px;
+	height: 50px;
+	right: 10px !important;
+	bottom: 10px !important;
+    background-image:url('images/logo.png');
+}
+.dijitGutter{
+	display: none;
+}
+#rightPane{
+	width:300px;
+	padding:0;
+}
+.soria .dijitAccordionTitle{
+	background: #fafafa;
+	border: 1px solid #adaaad;
+	-moz-border-radius: 5px;
+  	-webkit-border-radius: 5px;
+  	-o-border-radius: 5px;
+  	border-radius: 5px;
+  	height: 1.4em;
+  	font-size: 1.1em;
+  	font-weight: bold;
+}
+.soria .dijitAccordionTitleSelected {
+	background: #f9f9f9 url("images/accordionItemActive.png") top repeat-x;
+}
+ 
+@media only screen and (max-width:320px){
+	#header{
+		display: none;
+	}
+	#mobileBar{
+		display: block;
+	}
+	#rightPane{
+		display: none;
+	}
+	#map{
+		display: block;
+	}
+}
+
+@media only screen and (min-width:321px) and (max-width:768px){
+	#header{
+		display: block;
+	}
+	#mobileBar{
+		display: block;
+	}
+	#rightPane{
+		display: none;
+	}
+	#map{
+		display: block;
+	}
+}
+
+@media only screen and (min-width:769px){
+	#header{
+		display: block;
+	}
+	#mobileBar{
+		display: none;
+	}
+	#rightPane{
+		display: block;
+	}
+	#map{
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 1280px){
+	#rightPane{
+		width:350px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

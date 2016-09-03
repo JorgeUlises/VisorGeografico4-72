@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <title>4-72</title>
+        <meta name="description" content="Aplicacion web optimizada para móviles para la búsqueda de códigos postales" />
+        <meta name="author" content="Geo-Thinking" />
+
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        
+        <link rel="shortcut icon" href="css/images/favicon.ico" />
+        
+        <!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/soria/soria.css">
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/claro/document.css">
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dojox/layout/resources/floatingpane.css">
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css" />
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dojo/resources/dojo.css">
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dojox/grid/enhanced/resources/claro/EnhancedGrid.css">
+		<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dojox/grid/enhanced/resources/EnhancedGrid_rtl.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+        <!-- Javascripts -->
+		<script>dojoConfig = {async: true, parseOnLoad: true}</script>
+        <script src="http://serverapi.arcgisonline.com/jsapi/arcgis/3.5/"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/geo1.js"></script>
+    </head>
+
+<body class="soria">
+    <div id="bc" data-dojo-type="dijit.layout.BorderContainer" data-dojo-props="design:'headline', gutters:false">
+        <!-- Header Section-->
+        <div id="header" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
+            <div id="banner">					
+            </div> 
+        </div>
+        <!--End Header-->   
+        <!-- Mobile Bar Section-->
+        <div id="mobileBar" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top'">
+        	<div id="irMapa" class="mobileButton" onclick="goToMap()">	
+        		Ir al Mapa		
+            </div>
+            <div id="irMenu" class="mobileButton" onclick="goToMenu()">	
+        		Ir al Menú		
+            </div> 
+        </div>
+        <!--End Mobile Bar-->
+        <!-- Main Content Section (map, toolbars, left panel)-->
+        <div id="mainWindow" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'center'">
+	        <div id="mainWB" data-dojo-type="dijit.layout.BorderContainer">
+	            <!-- Map Section -->
+	            <div id="mapContainer" dojotype="dijit.layout.ContentPane" data-dojo-props="region:'center'">
+		            <div id="map">
+		            	<!-- Toolbar (Search Basemap Measure)--> 
+						<div id="toolbarContainer">
+							<div id="toolbar" data-dojo-type="dijit.Toolbar">
+								<div id="ubicar" title="Herramienta 1" data-dojo-type="dijit.form.Button" data-dojo-props="iconClass:'ubicarIcon toolbarIcon', showLabel: false, onClick:function(){alert();}" type="button">
+								</div>
+								<div id="otro" title="Herramienta 2" data-dojo-type="dijit.form.Button" data-dojo-props="iconClass:'ubicarIcon toolbarIcon', showLabel: false, onClick:function(){alert();}" type="button">
+								</div>
+							</div>
+						</div>
+						<!--End Toolbar-->
+		            </div>
+	            </div>
+	            <!--end Map section-->     
+	            <!-- Right Pane Section-->
+	            <div id="rightPane" dojotype="dijit.layout.ContentPane" data-dojo-props="region:'right'">
+				  <div dojoType="dijit.layout.AccordionContainer">
+					<div dojoType="dijit.layout.ContentPane" title="Leyenda" selected="true">
+					</div>
+					<div dojoType="dijit.layout.ContentPane" title="Oficinas de 4-72">
+					</div>
+					<div dojoType="dijit.layout.ContentPane" title="Busque su código postal">
+					</div>
+					<div dojoType="dijit.layout.ContentPane" title="Normalización de direcciones">
+					</div>
+					<div dojoType="dijit.layout.ContentPane" title="Busqueda por código posta">
+					</div>
+					<div dojoType="dijit.layout.ContentPane" title="Busqueda por lugar">
+					</div>
+					<div dojoType="dijit.layout.ContentPane" title="Contenido del mapa">
+					</div>
+				  </div>
+	            </div>
+	            <!--end Right Pane section-->           
+	        </div>
+	    </div>    
+    </div>
+</body>
+</html>
